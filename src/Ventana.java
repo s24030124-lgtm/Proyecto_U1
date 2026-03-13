@@ -12,23 +12,32 @@ public class Ventana extends JFrame {
    
    public Ventana(){
         super("Tienda de Chamarras");
+      
+      JPanel tienda = new JPanel();
+        tienda.setLayout(new GridLayout(6,1));
+      
+      tienda.add(prenda("Chamarra de Cuero", 300));
+        tienda.add(prenda("Chamarra de mezclilla",200));
+        tienda.add(prenda("Chamarra de Gamuza",500));
+      tienda.add(prenda("Chamarra de poliester", 250));
+        tienda.add(prenda("Chaqueta Deportiva",280));
+        tienda.add(prenda("Chamarra de Nylon",230));
+      
+      add(shopping,BorderLayout.WEST);
 }
-
-   //Pagar las compras u informar que hace falta seleccionar alguna chamarra
    public void pagar(){
 
         if(total == 0){
-            JOptionPane.showMessageDialog(this,"El carrito está vacío");
+            JOptionPane.showMessageDialog(this,"El carrito está vacío, seleccione alguna prenda");
         }else{
-            JOptionPane.showMessageDialog(this,"Tu pago fue exitoso");
+            JOptionPane.showMessageDialog(this,"Pagado");
             limpiar();
          }
    }
-//limpia las compras que se hayan seleccionado por error 
     public void limpiar(){
 
         carrito.setText("");
         total = 0;
         totalDin.setText("Total: $0");
-
+    
     }
