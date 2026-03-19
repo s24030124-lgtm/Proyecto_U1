@@ -13,7 +13,7 @@ public class Proyecto {
             
             Ventana ventana = new Ventana();
             ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            ventana.setSize(850, 600);
+            ventana.setSize(700, 600);
             ventana.setLocationRelativeTo(null);
             ventana.setResizable(false);
             ventana.setVisible(true);
